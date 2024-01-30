@@ -5,6 +5,9 @@ const favicon = require('serve-favicon')
 const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 
+require('dotenv').config()
+require('./config/database')
+
 const app = express()
 
 const cupcakeController = require('./controllers/CupcakeController')
